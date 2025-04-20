@@ -1,0 +1,8 @@
+<div class="piano">
+    <div *ngFor="let key of getMappedKeys()" 
+         [ngClass]="{'white-key': !isBlackKey(key), 'black-key': isBlackKey(key), 'active': keyMap[key] === activeNote}"
+         (click)="playNote(keyMap[key])">
+      {{ key }}: {{ keyMap[key] }}
+    </div>
+  </div>
+  

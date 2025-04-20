@@ -1,0 +1,50 @@
+.piano {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    margin: 20px;
+  }
+  
+  .white-key, .black-key {
+    position: relative;
+    border: 1px solid #000;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .white-key {
+    width: 40px;
+    height: 100%;
+    background-color: #fff;
+    margin-right: 2px;
+    color: #000; /* Text color for white keys */
+  }
+  
+  .black-key {
+    width: 30px;
+    height: 60%;
+    background-color: #000;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 1;
+    color: #fff; /* Text color for black keys */
+  }
+  
+  .active {
+    background-color: #ff0;
+  }
+  
+  .key-label {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+  }
+  .white-key:hover,
+.black-key:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  box-shadow: 0 0 15px #fdd835;
+}

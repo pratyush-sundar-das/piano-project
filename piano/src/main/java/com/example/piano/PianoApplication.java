@@ -1,0 +1,14 @@
+package com.example.piano;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PianoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PianoApplication.class, args);
+		System.out.println("Application is running at 8080 🚀");
+	}
+
+}
