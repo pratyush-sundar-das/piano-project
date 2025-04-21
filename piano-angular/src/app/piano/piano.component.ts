@@ -51,6 +51,10 @@ export class PianoComponent implements OnInit, OnDestroy {
   }
 
   playNote(note: string): void {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();  // Prevent focus click sound
+    }
+  
     const encodedNote = encodeURIComponent(note);
     if (this.audio) {
       this.audio.pause();
@@ -61,6 +65,8 @@ export class PianoComponent implements OnInit, OnDestroy {
     this.activeNote = note;
     setTimeout(() => this.activeNote = null, 200);
   }
+  
+  
 
   generateFullPiano(): { note: string; isBlack: boolean; keyBind?: string }[] {
     const notes: { note: string; isBlack: boolean; keyBind?: string }[] = [];
