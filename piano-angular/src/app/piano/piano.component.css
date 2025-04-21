@@ -3,6 +3,9 @@
     align-items: flex-end;
     height: 200px;
     margin: 20px;
+    box-shadow: #000 0px 0px 10px;
+    border-radius: 10px;
+
   }
   
   .white-key, .black-key {
@@ -10,6 +13,9 @@
     border: 1px solid #000;
     cursor: pointer;
     user-select: none;
+    border-radius: 4px;
+    box-shadow: #000 0px 0px 5px;
+    transition: background-color 0.3s, transform 0.1s;
   }
   
   .white-key {
@@ -48,3 +54,17 @@
 .active {
   box-shadow: 0 0 15px #fdd835;
 }
+
+.piano div {
+  outline: none;
+  user-select: none;
+}
+
+.piano div:focus {
+  outline: none;
+}
+
+.piano div:active {
+  outline: none;
+}
+
